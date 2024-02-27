@@ -12,6 +12,9 @@ public class Company {
         this.id = id;
         this.name = name;
         this.giro = giro;
+        if (giro < 0) {
+            this.giro = 0;
+        }
         this.developerNames = developerNames;
     }
 
@@ -51,11 +54,6 @@ public class Company {
         this.developerNames = developerNames;
     }
 
-    private void checkGiro(double giro) {
-
-    }
-
-
     public void addEmployee(int index, String name) {
         if (index < 0 || index > developerNames.length) {
             System.out.println("Invalid index" + index);
@@ -74,7 +72,6 @@ public class Company {
 
         }
     }
-
 
     @Override
     public String toString() {

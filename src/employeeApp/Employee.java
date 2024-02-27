@@ -20,8 +20,7 @@ public class Employee {
     }
 
     public Employee(int id, String fullName, String email, String password, String[] healthPlans) {
-        this.id = id;
-        this.fullName = fullName;
+        this(id, fullName);
         this.email = email;
         this.password = password;
         this.healthPlans = healthPlans;
@@ -66,7 +65,6 @@ public class Employee {
     public void setHealthPlans(String[] healthPlans) {
         this.healthPlans = healthPlans;
     }
-
 
     public void addHealthPlan(int index, String name) {
         if (index < 0) {
